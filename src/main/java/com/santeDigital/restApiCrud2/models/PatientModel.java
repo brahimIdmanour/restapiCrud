@@ -20,8 +20,8 @@ public class PatientModel {
     private String origine;
     private String residence;
     private String niveauSocioEconimique;
-    private String CouvertureMedical;
-    private Set<PatientTensionMesure> mesures;
+    private String couvertureMedical;
+    private Set<PatientTensionMesure> tesionArterielle;
     private Set<PatientFichiers> fichiers;
 
 }
