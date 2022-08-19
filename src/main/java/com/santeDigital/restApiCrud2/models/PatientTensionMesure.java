@@ -4,6 +4,8 @@ import lombok.Data;
 
 @Data
 public class PatientTensionMesure {
-    private String name;
-    private Integer value;
+    private Integer systolique;
+    private Integer diastolique;
+    private Integer pouls;
+
 }
