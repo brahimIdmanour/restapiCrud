@@ -4,7 +4,6 @@ import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.Date;
 import java.util.Set;
 
 @Data
@@ -15,7 +14,7 @@ public class PatientModel {
     private String nom;
     private String prenom;
     private String sexe;
-    private Date dateNaiss;
+    private String dateNaiss;
     private String telephone;
     private String situationFamiliale;
     private String origine;
@@ -23,4 +22,6 @@ public class PatientModel {
     private String niveauSocioEconimique;
     private String CouvertureMedical;
     private Set<PatientTensionMesure> mesures;
+    private Set<PatientFichiers> fichiers;
+
 }
