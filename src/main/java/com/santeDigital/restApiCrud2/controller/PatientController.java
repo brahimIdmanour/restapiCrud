@@ -27,7 +27,7 @@ public class PatientController {
         return ResponseEntity.ok(patientService.update(request));
     }
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<Void> delete(@RequestBody  String id){
+    public ResponseEntity<Void> delete(@PathVariable("id") String id){
         patientService.delete(id);
         return ResponseEntity.ok().build();
     }
