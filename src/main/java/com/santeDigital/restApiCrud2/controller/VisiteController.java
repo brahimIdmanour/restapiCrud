@@ -22,12 +22,12 @@ public class VisiteController {
     public ResponseEntity<VisiteModel> save(@RequestBody VisiteModel request) {
         return ResponseEntity.ok(visiteService.save(request));
     }
-    @PutMapping("/update")
-    public ResponseEntity<VisiteModel> update(@RequestBody VisiteModel request) {
+    @PutMapping("/update/{id}")
+    public ResponseEntity<VisiteModel> update(@PathVariable("id") String id, @RequestBody VisiteModel request) {
         return ResponseEntity.ok(visiteService.update(request));
     }
-    @DeleteMapping("/delete")
-    public ResponseEntity<Void> delete(@RequestBody String id){
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<Void> delete(@PathVariable("id") String id){
         visiteService.delete(id);
         return ResponseEntity.ok().build();
     }
