@@ -22,8 +22,8 @@ public class PatientController {
     public ResponseEntity<PatientModel> save(@RequestBody PatientModel request){
         return ResponseEntity.ok(patientService.save(request));
     }
-    @PutMapping("/update")
-    public ResponseEntity<PatientModel> update(@RequestBody PatientModel request) {
+    @PutMapping("/update/{id}")
+    public ResponseEntity<PatientModel> update(@PathVariable("id") String id, @RequestBody PatientModel request) {
         return ResponseEntity.ok(patientService.update(request));
     }
     @DeleteMapping("/delete/{id}")
