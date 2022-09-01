@@ -1,0 +1,20 @@
+package com.santeDigital.restApiCrud2.models;
+
+import lombok.Data;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Data
+@Document(collection = "histoire_maladie")
+public class HistoireMaladieModel {
+    @Id
+    private String id;
+    private String debut_maladie;
+    private String period_maladie;
+    private String mode_installation;
+    private String facteur_declenchant;
+    private String occupation_lors_des_troubles;
+    private boolean apyrexie;
+    private String etat_general;
+    private String altere;
+}
