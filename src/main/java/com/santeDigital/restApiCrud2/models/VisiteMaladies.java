@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class VisiteMaladies {
     private String motif;
-    private String localisation;
     private String histoire;
+    private String localisation;
 
 }

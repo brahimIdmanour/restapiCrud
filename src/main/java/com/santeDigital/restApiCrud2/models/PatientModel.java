@@ -21,7 +21,5 @@ public class PatientModel {
     private String residence;
     private String niveauSocioEconimique;
     private String couvertureMedical;
-    private Set<PatientTensionMesure> tesionArterielle;
-    private Set<PatientFichiers> fichiers;
 
 }

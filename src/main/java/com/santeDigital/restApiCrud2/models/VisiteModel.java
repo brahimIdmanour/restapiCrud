@@ -12,7 +12,6 @@ public class VisiteModel {
     @Id
     private String id;
     private String date;
-    private String cause;
     private String service;
     private String etat;
     private Set<VisiteMaladies> maladies;
