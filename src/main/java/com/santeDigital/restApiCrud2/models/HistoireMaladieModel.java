@@ -4,6 +4,8 @@ import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.List;
+
 @Data
 @Document(collection = "histoire_maladie")
 public class HistoireMaladieModel {
@@ -16,5 +18,5 @@ public class HistoireMaladieModel {
     private String occupation_lors_des_troubles;
     private boolean apyrexie;
     private String etat_general;
-    private String altere;
+    private List<String> altereOptions;
 }
