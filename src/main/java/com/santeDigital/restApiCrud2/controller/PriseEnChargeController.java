@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/priseEnCharge")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "https://crudapisante.herokuapp.com/")
 public class PriseEnChargeController {
     @Autowired
     private PriseEnChargeService priseEnChargeService;
