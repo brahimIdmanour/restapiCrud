@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/priseEnCharge")
+@CrossOrigin(origins = "*")
 public class PriseEnChargeController {
     @Autowired
     private PriseEnChargeService priseEnChargeService;
