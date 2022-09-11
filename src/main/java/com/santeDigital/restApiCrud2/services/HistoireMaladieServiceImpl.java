@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
+
 @Data
 @Service
 public class HistoireMaladieServiceImpl implements HistoirMaladieService{
@@ -15,6 +17,11 @@ public class HistoireMaladieServiceImpl implements HistoirMaladieService{
     @Override
     public List<HistoireMaladieModel> findAll() {
         return histoireMaladieRepository.findAll();
+    }
+
+    @Override
+    public Optional<HistoireMaladieModel> findById(String id) {
+        return histoireMaladieRepository.findById(id);
     }
 
     @Override

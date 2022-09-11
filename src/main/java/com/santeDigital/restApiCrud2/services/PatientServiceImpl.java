@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
+
 @Data
 @Service
 public class PatientServiceImpl implements PatientService{
@@ -16,6 +18,11 @@ public class PatientServiceImpl implements PatientService{
     @Override
     public List<PatientModel> findAll() {
         return patientRepository.findAll();
+    }
+
+    @Override
+    public Optional<PatientModel> findById(String id) {
+        return patientRepository.findById(id);
     }
 
     @Override

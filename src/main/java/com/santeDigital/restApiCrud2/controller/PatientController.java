@@ -1,12 +1,15 @@
 package com.santeDigital.restApiCrud2.controller;
 
 import com.santeDigital.restApiCrud2.models.PatientModel;
+import com.santeDigital.restApiCrud2.models.PriseEnChargeModel;
 import com.santeDigital.restApiCrud2.services.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/patient")
@@ -17,6 +20,11 @@ public class PatientController {
     @GetMapping("/findAll")
     public ResponseEntity<List<PatientModel>> findAll(){
         return ResponseEntity.ok(patientService.findAll());
+    }
+    @GetMapping("findById/{id}")
+    public ResponseEntity<PatientModel> findById(@PathVariable("id") String id) {
+        Optional<PatientModel> patientById = patientService.findById(id);
+        return new  ResponseEntity<>(patientById.get(), HttpStatus.OK);
     }
     @PostMapping("/save")
     public ResponseEntity<PatientModel> save(@RequestBody PatientModel request){
