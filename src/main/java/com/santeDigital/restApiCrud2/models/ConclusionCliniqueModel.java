@@ -2,6 +2,7 @@ package com.santeDigital.restApiCrud2.models;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
@@ -11,4 +12,6 @@ public class ConclusionCliniqueModel {
     private String id;
     private String syndromes;
     private String symptomes;
+    @DBRef
+    private VisiteModel visiteRefId;
 }

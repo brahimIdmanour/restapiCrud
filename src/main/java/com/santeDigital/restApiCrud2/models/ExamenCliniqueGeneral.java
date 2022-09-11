@@ -1,6 +1,7 @@
 package com.santeDigital.restApiCrud2.models;
 
 import lombok.Data;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 
 @Data
 public class ExamenCliniqueGeneral {
@@ -15,5 +16,7 @@ public class ExamenCliniqueGeneral {
     private String couleur_des_conjonctives;
     private String aspect_des_membres_superieurs_et_inferieurs;
     private String autre_signes_particuliers;
+    @DBRef
+    private VisiteModel visiteRefId;
 
 }
