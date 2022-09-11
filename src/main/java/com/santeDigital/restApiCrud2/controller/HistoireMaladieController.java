@@ -13,6 +13,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/histoireMaladie")
+@CrossOrigin(origins = "http://localhost:4200/")
 public class HistoireMaladieController {
     @Autowired
     private HistoirMaladieService histoirMaladieService;

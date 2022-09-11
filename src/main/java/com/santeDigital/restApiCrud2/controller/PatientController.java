@@ -1,7 +1,6 @@
 package com.santeDigital.restApiCrud2.controller;
 
 import com.santeDigital.restApiCrud2.models.PatientModel;
-import com.santeDigital.restApiCrud2.models.PriseEnChargeModel;
 import com.santeDigital.restApiCrud2.services.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,6 +12,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/patient")
+@CrossOrigin(origins = "http://localhost:4200/")
 public class PatientController {
     @Autowired
     private PatientService patientService;
