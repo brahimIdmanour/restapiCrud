@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Data
 @Service
@@ -17,6 +18,12 @@ public class VisiteServiceImpl implements VisiteService{
     public List<VisiteModel> findAll() {
         return visiteRepository.findAll();
     }
+
+    @Override
+    public Optional<VisiteModel> findById(String id) {
+        return visiteRepository.findById(id);
+    }
+
 
     @Override
     public VisiteModel save(VisiteModel visiteModel) {
