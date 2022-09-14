@@ -1,7 +1,6 @@
 package com.santeDigital.restApiCrud2.controller;
 
 import com.santeDigital.restApiCrud2.models.HistoireMaladieModel;
-import com.santeDigital.restApiCrud2.models.PriseEnChargeModel;
 import com.santeDigital.restApiCrud2.services.HistoirMaladieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

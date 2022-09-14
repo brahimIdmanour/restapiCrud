@@ -20,7 +20,7 @@ public class PriseEnChargeController {
     public ResponseEntity<List<PriseEnChargeModel>> findAll(){
         return ResponseEntity.ok(priseEnChargeService.findAll());
     }
-    @GetMapping("findById/{id}")
+    @GetMapping("/findById/{id}")
     public ResponseEntity<PriseEnChargeModel> findById(@PathVariable("id") String id) {
         Optional<PriseEnChargeModel> priseById = priseEnChargeService.findById(id);
         return new  ResponseEntity<>(priseById.get(), HttpStatus.OK);

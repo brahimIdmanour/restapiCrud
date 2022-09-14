@@ -1,5 +1,6 @@
 package com.santeDigital.restApiCrud2.models;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
@@ -16,6 +17,7 @@ import java.util.Set;
 public class VisiteModel {
     @Id
     private String id;
+    @JsonFormat(pattern="dd-MM-yyyy")
     private Date createdAt = new Date();
     private String service;
     private String etat;

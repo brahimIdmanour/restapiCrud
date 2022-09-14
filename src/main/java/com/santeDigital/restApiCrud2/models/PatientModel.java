@@ -19,6 +19,7 @@ public class PatientModel {
     private String situationFamiliale;
     private String origine;
     private String residence;
+    private String profession;
     private String niveauSocioEconimique;
     private String couvertureMedical;
 
