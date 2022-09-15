@@ -4,9 +4,8 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.Field;
-import org.springframework.data.mongodb.core.mapping.FieldType;
 
 import java.util.Date;
 import java.util.Set;
@@ -22,7 +21,8 @@ public class VisiteModel {
     private String service;
     private String etat;
     private Set<VisiteMaladies> maladies;
-    @Field(targetType = FieldType.OBJECT_ID)
-    private String patientId;
+    @DBRef
+    private PatientModel patientRef;
+
 
 }
