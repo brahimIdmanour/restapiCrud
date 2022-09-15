@@ -8,7 +8,6 @@ import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Date;
-import java.util.Set;
 
 @Data
 @Document(collection = "visite")
@@ -20,7 +19,6 @@ public class VisiteModel {
     private Date createdAt = new Date();
     private String service;
     private String etat;
-    private Set<VisiteMaladies> maladies;
     @DBRef
     private PatientModel patientRef;
 
