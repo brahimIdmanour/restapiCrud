@@ -16,11 +16,11 @@ public class VisiteModel {
     @Id
     private String id;
     @JsonFormat(pattern="dd-MM-yyyy")
-    private Date createdAt = new Date();
-    private String service;
-    private String etat;
+    private Date Date = new Date();
+    private String Services;
+    private String Status;
     @DBRef
-    private PatientModel patientRef;
+    private PatientModel Patient_id;
 
 
 }

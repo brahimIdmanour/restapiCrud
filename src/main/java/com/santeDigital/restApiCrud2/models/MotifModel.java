@@ -12,7 +12,7 @@ import java.util.Set;
 public class MotifModel {
     @Id
     private String id;
-    private Set<MotifObject> motif;
+    private Set<MotifObject> motifs;
     @DBRef
-    private VisiteModel visiteRef;
+    private VisiteModel visiteId;
 }

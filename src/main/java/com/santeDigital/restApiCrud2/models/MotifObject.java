@@ -6,6 +6,6 @@ import java.util.List;
 
 @Data
 public class MotifObject {
-    private String nom;
+    private String name;
     private List<String> localisations;
 }

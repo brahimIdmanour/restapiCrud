@@ -12,5 +12,5 @@ public class PriseEnChargeModel {
     private String id;
     private String prise_en_charge;
     @DBRef
-    private VisiteModel visiteRef;
+    private VisiteModel visiteId;
 }

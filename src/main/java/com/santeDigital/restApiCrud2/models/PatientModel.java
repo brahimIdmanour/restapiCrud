@@ -12,16 +12,13 @@ public class PatientModel {
     @Id
     private String id;
     private String CIN;
-    private String nom;
-    private String prenom;
-    private String sexe;
-    private String dateNaiss;
-    private String telephone;
-    private String situationFamiliale;
-    private String origine;
-    private String residence;
-    private String profession;
-    private String niveauSocioEconimique;
-    private String couvertureMedical;
+    private String Nom;
+    private String Sex;
+    private String Télé;
+    private String Situation;
+    private String Résidence;
+    private String Profession;
+    private String Nv_Socioéconomique;
+    private String Coverture_médicale;
 
 }

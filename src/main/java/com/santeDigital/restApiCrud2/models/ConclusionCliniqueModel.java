@@ -12,8 +12,8 @@ import java.util.List;
 public class ConclusionCliniqueModel {
     @Id
     private String id;
-    private List<String> syndromes;
-    private List<String>  symptomes;
+    private List<String> SymptomesListe;
+    private List<String>  SyndromesListe;
     @DBRef
-    private VisiteModel visiteRef;
+    private VisiteModel visitId;
 }

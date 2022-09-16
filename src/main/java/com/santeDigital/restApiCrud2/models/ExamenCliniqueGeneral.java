@@ -5,16 +5,16 @@ import org.springframework.data.mongodb.core.mapping.DBRef;
 
 @Data
 public class ExamenCliniqueGeneral {
-    private String conscience;
-    private boolean pupilles_symetriques;
-    private boolean pupilles_reactives;
-    private String frequence_respiratoire;
-    private String frequence_cardiaque;
-    private String tension_arterielle;
-    private String temperature;
-    private String couleur_de_la_peau;
-    private String couleur_des_conjonctives;
-    private String aspect_des_membres_superieurs_et_inferieurs;
-    private String autre_signes_particuliers;
+    private String CONSCIENCE;
+    private boolean PupSym;
+    private boolean PupRea;
+    private String FrerRes;
+    private String FreCar;
+    private String TensArte;
+    private String tem;
+    private String ColoRPea;
+    private String ColoeConj;
+    private String AspDesMemInSUp;
+    private String AuterSin;
 
 }

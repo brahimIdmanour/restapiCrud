@@ -15,5 +15,5 @@ public class ExamenCliniqueModel {
     private Set<ExamenCliniqueGeneral> examenCliniqueGenerals;
     private Set<ExamenCliniqueAppareils> examenCliniqueAppareils;
     @DBRef
-    private VisiteModel visiteRef;
+    private VisiteModel visiteId;
 }
