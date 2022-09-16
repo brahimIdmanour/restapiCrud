@@ -11,6 +11,7 @@ import java.util.Set;
 public class PatientModel {
     @Id
     private String id;
+    private String CIN;
     private String nom;
     private String prenom;
     private String sexe;
