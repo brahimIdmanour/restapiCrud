@@ -10,15 +10,15 @@ import java.util.Set;
 @Document(collection = "Patient")
 public class PatientModel {
     @Id
-    private String id;
+    private String _id;
     private String CIN;
     private String Nom;
     private String Sex;
-    private String Télé;
+    private String Phone;
     private String Situation;
-    private String Résidence;
+    private String Residence;
     private String Profession;
-    private String Nv_Socioéconomique;
-    private String Coverture_médicale;
+    private String Nv_Socioeconomique;
+    private String Couverture_medicale;
 
 }
