@@ -4,6 +4,8 @@ import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
+import org.springframework.data.mongodb.core.mapping.FieldType;
 
 import java.util.Set;
 
@@ -14,6 +16,9 @@ public class ExamenCliniqueModel {
     private String id;
     private Set<ExamenCliniqueGeneral> examenCliniqueGenerals;
     private Set<ExamenCliniqueAppareils> examenCliniqueAppareils;
-    @DBRef
-    private VisiteModel visiteId;
+    /*@DBRef
+    private VisiteModel visiteId;*/
+
+    @Field(targetType = FieldType.OBJECT_ID)
+    private String visiteId;
 }
