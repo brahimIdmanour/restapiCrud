@@ -13,7 +13,7 @@ public class PatientModel {
     private String _id;
     private String CIN;
     private String Nom;
-    private String Sex;
+    private String Sexe;
     private String Phone;
     private String Situation;
     private String Residence;
