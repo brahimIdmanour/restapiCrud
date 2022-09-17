@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.Set;
 
 @Data
-@Document(collection = "patient")
+@Document(collection = "Patient")
 public class PatientModel {
     @Id
     private String id;
