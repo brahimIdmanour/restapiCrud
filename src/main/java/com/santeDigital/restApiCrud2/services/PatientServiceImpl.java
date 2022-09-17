@@ -11,7 +11,7 @@ import java.util.Optional;
 
 @Data
 @Service
-public class PatientServiceImpl implements PatientService{
+public class PatientServiceImpl implements PatientService {
     @Autowired
     private PatientRepository patientRepository;
 
@@ -27,20 +27,23 @@ public class PatientServiceImpl implements PatientService{
 
     @Override
     public PatientModel save(PatientModel patientModel) {
-//        validate(patientModel);
+        // validate(patientModel);
         return patientRepository.save(patientModel);
     }
 
-   /* private void validate(PatientModel patientModel) {
-        if (patientModel.getNom() == null || patientModel.getCIN().isEmpty()){
-            throw new IllegalArgumentException("remplir tout les champ");
-        }
-    }*/
+    /*
+     * private void validate(PatientModel patientModel) {
+     * if (patientModel.getNom() == null || patientModel.getCIN().isEmpty()){
+     * throw new IllegalArgumentException("remplir tout les champ");
+     * }
+     * }
+     */
 
     @Override
     public PatientModel update(PatientModel patientModel) {
-        patientRepository.findById(patientModel.getId()).orElseThrow(() -> new IllegalArgumentException("aucun patient trouve"));
-//        validate(patientModel);
+        patientRepository.findById(patientModel.get_id())
+                .orElseThrow(() -> new IllegalArgumentException("aucun patient trouve"));
+        // validate(patientModel);
         return patientRepository.save(patientModel);
     }
 
