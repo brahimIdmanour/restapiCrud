@@ -12,7 +12,6 @@ import java.util.Set;
 
 @Data
 @Document(collection = "examen_clinique")
-@CompoundIndex(def = "{'visiteId': 1, 'number': 1}", unique = true)
 public class ExamenCliniqueModel {
     @Id
     private String id;
