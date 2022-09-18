@@ -9,4 +9,6 @@ import java.util.Optional;
 @Repository
 public interface PriseEnChargeRepository extends MongoRepository<PriseEnChargeModel, String> {
     Optional<PriseEnChargeModel> findById(String id);
+
+    Optional<PriseEnChargeModel> findByVisiteId(String id);
 }

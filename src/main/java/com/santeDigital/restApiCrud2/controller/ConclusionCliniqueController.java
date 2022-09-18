@@ -25,7 +25,7 @@ public class ConclusionCliniqueController {
         Optional<ConclusionCliniqueModel> conclusionById = conclusionCliniqueService.findById(id);
         return new  ResponseEntity<>(conclusionById.get(), HttpStatus.OK);
     }
-   @GetMapping("/findByVisiteId/{id}")
+   @GetMapping("/findByvisiteId/{id}")
    public  ResponseEntity<ConclusionCliniqueModel> findByVisiteId(@PathVariable("id") String id){
         Optional<ConclusionCliniqueModel> conclusionByVisiteId = conclusionCliniqueService.findByVisiteId(id);
         return new ResponseEntity<>(conclusionByVisiteId.get(), HttpStatus.OK);

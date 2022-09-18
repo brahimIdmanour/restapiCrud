@@ -11,6 +11,8 @@ public interface PriseEnChargeService {
 
     Optional<PriseEnChargeModel> findById(String id);
 
+    Optional<PriseEnChargeModel> findByvisiteId(String visiteId);
+
     PriseEnChargeModel save(PriseEnChargeModel priseEnChargeModel);
 
     PriseEnChargeModel update(PriseEnChargeModel priseEnChargeModel);

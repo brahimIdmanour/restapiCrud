@@ -25,6 +25,11 @@ public class PriseEnChargeServiceImpl implements PriseEnChargeService{
     }
 
     @Override
+    public Optional<PriseEnChargeModel> findByvisiteId(String visiteId) {
+        return priseEnChargeRepository.findByVisiteId(visiteId);
+    }
+
+    @Override
     public PriseEnChargeModel save(PriseEnChargeModel priseEnChargeModel) {
         return priseEnChargeRepository.save(priseEnChargeModel);
     }

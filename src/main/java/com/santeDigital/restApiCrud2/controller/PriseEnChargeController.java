@@ -25,6 +25,11 @@ public class PriseEnChargeController {
         Optional<PriseEnChargeModel> priseById = priseEnChargeService.findById(id);
         return new  ResponseEntity<>(priseById.get(), HttpStatus.OK);
     }
+    @GetMapping("/findByvisiteId/{id}")
+    public  ResponseEntity<PriseEnChargeModel> findByvisiteId(@PathVariable("id") String id){
+        Optional<PriseEnChargeModel> priseByvisiteId = priseEnChargeService.findByvisiteId(id);
+        return new ResponseEntity<>(priseByvisiteId.get(), HttpStatus.OK);
+    }
     @PostMapping("/save")
     public ResponseEntity<PriseEnChargeModel> save(@RequestBody PriseEnChargeModel request){
         return ResponseEntity.ok(priseEnChargeService.save(request));
