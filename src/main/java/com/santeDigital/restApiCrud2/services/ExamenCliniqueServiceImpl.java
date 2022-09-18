@@ -38,7 +38,7 @@ public class ExamenCliniqueServiceImpl implements ExamenCliniqueService {
     @Override
     public ExamenCliniqueModel update(ExamenCliniqueModel examenCliniqueModel) {
         examenClinqueRepository.findById(examenCliniqueModel.getId())
-                .orElseThrow(() -> new IllegalArgumentException("aucun data"));
+                .orElseThrow(() -> new IllegalArgumentException("couldn't find examen clinique using provided ID"));
         return examenClinqueRepository.save(examenCliniqueModel);
     }
 
