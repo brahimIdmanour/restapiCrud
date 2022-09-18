@@ -25,6 +25,11 @@ public class ConclusionCliniqueServiceImpl implements ConclusionCliniqueService{
     }
 
     @Override
+    public Optional<ConclusionCliniqueModel> findByVisiteId(String visiteId) {
+        return conclusionCliniqueRepository.findByvisiteId(visiteId);
+    }
+
+    @Override
     public ConclusionCliniqueModel save(ConclusionCliniqueModel conclusionCliniqueModel) {
         return conclusionCliniqueRepository.save(conclusionCliniqueModel);
     }

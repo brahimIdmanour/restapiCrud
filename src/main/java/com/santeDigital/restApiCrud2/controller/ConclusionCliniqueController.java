@@ -22,16 +22,21 @@ public class ConclusionCliniqueController {
     }
     @GetMapping("findById/{id}")
     public ResponseEntity<ConclusionCliniqueModel> findById(@PathVariable("id") String id) {
-        Optional<ConclusionCliniqueModel> conclussionById = conclusionCliniqueService.findById(id);
-        return new  ResponseEntity<>(conclussionById.get(), HttpStatus.OK);
+        Optional<ConclusionCliniqueModel> conclusionById = conclusionCliniqueService.findById(id);
+        return new  ResponseEntity<>(conclusionById.get(), HttpStatus.OK);
     }
+   @GetMapping("/findByVisiteId/{id}")
+   public  ResponseEntity<ConclusionCliniqueModel> findByVisiteId(@PathVariable("id") String id){
+        Optional<ConclusionCliniqueModel> conclusionByVisiteId = conclusionCliniqueService.findByVisiteId(id);
+        return new ResponseEntity<>(conclusionByVisiteId.get(), HttpStatus.OK);
+   }
     @PostMapping("/save")
     public ResponseEntity<ConclusionCliniqueModel> save(@RequestBody ConclusionCliniqueModel request){
         return ResponseEntity.ok(conclusionCliniqueService.save(request));
     }
     @PutMapping("/update/{id}")
-    public ResponseEntity<ConclusionCliniqueModel> update(@PathVariable("id") String id, ConclusionCliniqueModel request){
-        return ResponseEntity.ok(conclusionCliniqueService.save(request));
+    public ResponseEntity<ConclusionCliniqueModel> update(@PathVariable("id") String id, @RequestBody ConclusionCliniqueModel request){
+        return ResponseEntity.ok(conclusionCliniqueService.update(request));
     }
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<ConclusionCliniqueModel> delete(@PathVariable("id") String id){

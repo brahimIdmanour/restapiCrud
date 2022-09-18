@@ -29,6 +29,7 @@ public class VisiteController {
         Optional<VisiteModel> visieById = visiteRepository.findById(id);
         return new  ResponseEntity<>(visieById.get(), HttpStatus.OK);
     }
+
     @PostMapping("/save")
     public ResponseEntity<VisiteModel> save(@RequestBody VisiteModel request) {
         return ResponseEntity.ok(visiteService.save(request));

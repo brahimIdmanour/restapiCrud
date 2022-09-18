@@ -22,13 +22,13 @@ public class ExamenCliniqueController {
         return ResponseEntity.ok(examenCliniqueService.findAll());
     }
 
-    @GetMapping("findById/{id}")
+    @GetMapping("/findById/{id}")
     public ResponseEntity<ExamenCliniqueModel> findById(@PathVariable("id") String id) {
         Optional<ExamenCliniqueModel> examenById = examenCliniqueService.findById(id);
         return new ResponseEntity<>(examenById.get(), HttpStatus.OK);
     }
 
-    @GetMapping("findByvisiteId/{id}")
+    @GetMapping("/findByvisiteId/{id}")
     public ResponseEntity<ExamenCliniqueModel> findByVisiteId(@PathVariable("id") String id) {
         Optional<ExamenCliniqueModel> examenById = examenCliniqueService.findByVisiteId(id);
         return new ResponseEntity<>(examenById.get(), HttpStatus.OK);
@@ -39,8 +39,8 @@ public class ExamenCliniqueController {
         return ResponseEntity.ok(examenCliniqueService.save(request));
     }
 
-    @PutMapping("/update")
-    public ResponseEntity<ExamenCliniqueModel> update(@RequestBody ExamenCliniqueModel request) {
+    @PutMapping("/update/{id}")
+    public ResponseEntity<ExamenCliniqueModel> update(@PathVariable("id") String id, @RequestBody ExamenCliniqueModel request) {
         return ResponseEntity.ok(examenCliniqueService.update(request));
     }
 

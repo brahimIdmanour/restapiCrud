@@ -11,6 +11,8 @@ public interface ConclusionCliniqueService {
 
     Optional<ConclusionCliniqueModel> findById(String id);
 
+    Optional<ConclusionCliniqueModel> findByVisiteId(String visiteId);
+
     ConclusionCliniqueModel save(ConclusionCliniqueModel conclusionCliniqueModel);
 
     ConclusionCliniqueModel update(ConclusionCliniqueModel conclusionCliniqueModel);
