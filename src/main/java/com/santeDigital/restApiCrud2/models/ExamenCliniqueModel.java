@@ -18,5 +18,7 @@ public class ExamenCliniqueModel {
     private String id;
     private Set<ExamenCliniqueGeneral> examenCliniqueGenerals;
     private Set<ExamenCliniqueAppareils> examenCliniqueAppareils;
+
+    @Field(targetType = FieldType.OBJECT_ID)
     private String visiteId;
 }
