@@ -11,6 +11,8 @@ public interface ExamenCliniqueService {
 
     Optional<ExamenCliniqueModel> findById(String id);
 
+    Optional<ExamenCliniqueModel> findByVisiteId(String visiteId);
+
     ExamenCliniqueModel save(ExamenCliniqueModel examenCliniqueModel);
 
     ExamenCliniqueModel update(ExamenCliniqueModel examenCliniqueModel);

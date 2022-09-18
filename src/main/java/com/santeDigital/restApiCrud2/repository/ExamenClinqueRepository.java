@@ -9,4 +9,6 @@ import java.util.Optional;
 @Repository
 public interface ExamenClinqueRepository extends MongoRepository<ExamenCliniqueModel, String> {
     Optional<ExamenCliniqueModel> findById(String id);
+
+    Optional<ExamenCliniqueModel> findByvisiteId(String visiteId);
 }

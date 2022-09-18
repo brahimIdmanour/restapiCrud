@@ -16,25 +16,36 @@ import java.util.Optional;
 public class ExamenCliniqueController {
     @Autowired
     private ExamenCliniqueService examenCliniqueService;
+
     @GetMapping("/findAll")
-    public ResponseEntity<List<ExamenCliniqueModel>> findAll(){
+    public ResponseEntity<List<ExamenCliniqueModel>> findAll() {
         return ResponseEntity.ok(examenCliniqueService.findAll());
     }
+
     @GetMapping("findById/{id}")
     public ResponseEntity<ExamenCliniqueModel> findById(@PathVariable("id") String id) {
         Optional<ExamenCliniqueModel> examenById = examenCliniqueService.findById(id);
-        return new  ResponseEntity<>(examenById.get(), HttpStatus.OK);
+        return new ResponseEntity<>(examenById.get(), HttpStatus.OK);
     }
+
+    @GetMapping("findByvisiteId/{id}")
+    public ResponseEntity<ExamenCliniqueModel> findByVisiteId(@PathVariable("id") String id) {
+        Optional<ExamenCliniqueModel> examenById = examenCliniqueService.findByVisiteId(id);
+        return new ResponseEntity<>(examenById.get(), HttpStatus.OK);
+    }
+
     @PostMapping("/save")
-    public ResponseEntity<ExamenCliniqueModel> save(@RequestBody ExamenCliniqueModel request){
+    public ResponseEntity<ExamenCliniqueModel> save(@RequestBody ExamenCliniqueModel request) {
         return ResponseEntity.ok(examenCliniqueService.save(request));
     }
+
     @PutMapping("/update/{id}")
-    public ResponseEntity<ExamenCliniqueModel> update(@PathVariable("id") String id, ExamenCliniqueModel request){
+    public ResponseEntity<ExamenCliniqueModel> update(@PathVariable("id") String id, ExamenCliniqueModel request) {
         return ResponseEntity.ok(examenCliniqueService.save(request));
     }
+
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<Void> delete(@PathVariable("id") String id){
+    public ResponseEntity<Void> delete(@PathVariable("id") String id) {
         examenCliniqueService.delete(id);
         return ResponseEntity.ok().build();
     }

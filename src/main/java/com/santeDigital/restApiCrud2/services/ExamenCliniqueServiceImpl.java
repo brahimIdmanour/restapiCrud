@@ -11,9 +11,10 @@ import java.util.Optional;
 
 @Data
 @Service
-public class ExamenCliniqueServiceImpl implements ExamenCliniqueService{
+public class ExamenCliniqueServiceImpl implements ExamenCliniqueService {
     @Autowired
     private ExamenClinqueRepository examenClinqueRepository;
+
     @Override
     public List<ExamenCliniqueModel> findAll() {
         return examenClinqueRepository.findAll();
@@ -25,13 +26,19 @@ public class ExamenCliniqueServiceImpl implements ExamenCliniqueService{
     }
 
     @Override
+    public Optional<ExamenCliniqueModel> findByVisiteId(String visiteId) {
+        return examenClinqueRepository.findByvisiteId(visiteId);
+    }
+
+    @Override
     public ExamenCliniqueModel save(ExamenCliniqueModel examenCliniqueModel) {
         return examenClinqueRepository.save(examenCliniqueModel);
     }
 
     @Override
     public ExamenCliniqueModel update(ExamenCliniqueModel examenCliniqueModel) {
-        examenClinqueRepository.findById(examenCliniqueModel.getId()).orElseThrow(()-> new IllegalArgumentException("aucun data"));
+        examenClinqueRepository.findById(examenCliniqueModel.getId())
+                .orElseThrow(() -> new IllegalArgumentException("aucun data"));
         return examenClinqueRepository.save(examenCliniqueModel);
     }
 

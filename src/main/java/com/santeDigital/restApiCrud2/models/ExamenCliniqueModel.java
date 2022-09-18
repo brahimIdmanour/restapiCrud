@@ -2,6 +2,7 @@ package com.santeDigital.restApiCrud2.models;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 import org.springframework.data.mongodb.core.mapping.FieldType;
@@ -16,7 +17,7 @@ public class ExamenCliniqueModel {
     private Set<ExamenCliniqueGeneral> examenCliniqueGenerals;
     private Set<ExamenCliniqueAppareils> examenCliniqueAppareils;
 
-
     @Field(targetType = FieldType.OBJECT_ID)
+    @Indexed(unique = true)
     private String visiteId;
 }
