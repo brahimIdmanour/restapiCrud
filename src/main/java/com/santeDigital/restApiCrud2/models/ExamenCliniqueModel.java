@@ -15,8 +15,8 @@ import java.util.Set;
 public class ExamenCliniqueModel {
     @Id
     private String id;
-    private Set<ExamenCliniqueGeneral> examenCliniqueGenerals;
-    private Set<ExamenCliniqueAppareils> examenCliniqueAppareils;
+    private ExamenCliniqueGeneral examenCliniqueGenerals;
+    private ExamenCliniqueAppareils examenCliniqueAppareils;
 
     @Field(targetType = FieldType.OBJECT_ID)
     @Indexed(unique = true)
