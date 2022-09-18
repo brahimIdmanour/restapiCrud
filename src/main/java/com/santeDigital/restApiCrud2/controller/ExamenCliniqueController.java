@@ -40,8 +40,9 @@ public class ExamenCliniqueController {
     }
 
     @PutMapping("/update/{id}")
-    public ResponseEntity<ExamenCliniqueModel> update(@PathVariable("id") String id, ExamenCliniqueModel request) {
-        return ResponseEntity.ok(examenCliniqueService.save(request));
+    public ResponseEntity<ExamenCliniqueModel> update(@PathVariable("id") String id,
+            @RequestBody ExamenCliniqueModel request) {
+        return ResponseEntity.ok(examenCliniqueService.update(request));
     }
 
     @DeleteMapping("/delete/{id}")
