@@ -19,5 +19,6 @@ public class ExamenCliniqueModel {
     private Set<ExamenCliniqueAppareils> examenCliniqueAppareils;
 
     @Field(targetType = FieldType.OBJECT_ID)
+    @Indexed(unique = true)
     private String visiteId;
 }
