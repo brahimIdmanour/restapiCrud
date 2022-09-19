@@ -39,8 +39,8 @@ public class ExamenCliniqueController {
         return ResponseEntity.ok(examenCliniqueService.save(request));
     }
 
-    @PutMapping("/update/{id}")
-    public ResponseEntity<ExamenCliniqueModel> update(@PathVariable("id") String id, @RequestBody ExamenCliniqueModel request) {
+    @PutMapping("/update")
+    public ResponseEntity<ExamenCliniqueModel> update(@RequestBody ExamenCliniqueModel request) {
         return ResponseEntity.ok(examenCliniqueService.update(request));
     }
 
