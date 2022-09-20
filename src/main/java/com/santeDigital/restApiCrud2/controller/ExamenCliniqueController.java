@@ -28,7 +28,7 @@ public class ExamenCliniqueController {
         return new ResponseEntity<>(examenById.get(), HttpStatus.OK);
     }
 
-    @GetMapping("/findByvisiteId/{id}")
+    @GetMapping("/findByVisiteId/{id}")
     public ResponseEntity<ExamenCliniqueModel> findByVisiteId(@PathVariable("id") String id) {
         Optional<ExamenCliniqueModel> examenById = examenCliniqueService.findByVisiteId(id);
         return new ResponseEntity<>(examenById.get(), HttpStatus.OK);

@@ -21,24 +21,34 @@ public class MotifController {
     private MotifRepository motifRepository;
 
     @GetMapping("/findAll")
-    public ResponseEntity<List<MotifModel>> findAll(){
+    public ResponseEntity<List<MotifModel>> findAll() {
         return ResponseEntity.ok(motifService.findAll());
     }
+
     @GetMapping("findById/{id}")
     public ResponseEntity<MotifModel> findById(@PathVariable("id") String id) {
         Optional<MotifModel> motifById = motifRepository.findById(id);
-        return new  ResponseEntity<>(motifById.get(), HttpStatus.OK);
+        return new ResponseEntity<>(motifById.get(), HttpStatus.OK);
     }
+
+    @GetMapping("findByVisiteId/{id}")
+    public ResponseEntity<MotifModel> findByVisiteId(@PathVariable("id") String id) {
+        Optional<MotifModel> motifById = motifRepository.findByVisiteId(id);
+        return new ResponseEntity<>(motifById.get(), HttpStatus.OK);
+    }
+
     @PostMapping("/save")
     public ResponseEntity<MotifModel> save(@RequestBody MotifModel request) {
         return ResponseEntity.ok(motifService.save(request));
     }
+
     @PutMapping("/update/{id}")
     public ResponseEntity<MotifModel> update(@PathVariable("id") String id, @RequestBody MotifModel request) {
         return ResponseEntity.ok(motifService.update(request));
     }
+
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<Void> delete(@PathVariable("id") String id){
+    public ResponseEntity<Void> delete(@PathVariable("id") String id) {
         motifService.delete(id);
         return ResponseEntity.ok().build();
     }
