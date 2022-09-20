@@ -18,24 +18,28 @@ public class PatientController {
     private PatientService patientService;
 
     @GetMapping("/findAll")
-    public ResponseEntity<List<PatientModel>> findAll(){
+    public ResponseEntity<List<PatientModel>> findAll() {
         return ResponseEntity.ok(patientService.findAll());
     }
+
     @GetMapping("findById/{id}")
     public ResponseEntity<PatientModel> findById(@PathVariable("id") String id) {
         Optional<PatientModel> patientById = patientService.findById(id);
-        return new  ResponseEntity<>(patientById.get(), HttpStatus.OK);
+        return new ResponseEntity<>(patientById.get(), HttpStatus.OK);
     }
+
     @PostMapping("/save")
-    public ResponseEntity<PatientModel> save(@RequestBody PatientModel request){
+    public ResponseEntity<PatientModel> save(@RequestBody PatientModel request) {
         return ResponseEntity.ok(patientService.save(request));
     }
-    @PutMapping("/update/{id}")
-    public ResponseEntity<PatientModel> update(@PathVariable("id") String id, @RequestBody PatientModel request) {
+
+    @PutMapping("/update")
+    public ResponseEntity<PatientModel> update(@RequestBody PatientModel request) {
         return ResponseEntity.ok(patientService.update(request));
     }
+
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<Void> delete(@PathVariable("id") String id){
+    public ResponseEntity<Void> delete(@PathVariable("id") String id) {
         patientService.delete(id);
         return ResponseEntity.ok().build();
     }
