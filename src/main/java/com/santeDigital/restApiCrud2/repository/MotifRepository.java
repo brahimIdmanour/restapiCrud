@@ -9,4 +9,6 @@ import java.util.Optional;
 @Repository
 public interface MotifRepository extends MongoRepository<MotifModel, String> {
     Optional<MotifModel> findById(String id);
+
+    Optional<MotifModel> findByVisiteId(String id);
 }
