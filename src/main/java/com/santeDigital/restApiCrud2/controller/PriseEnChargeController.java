@@ -34,8 +34,8 @@ public class PriseEnChargeController {
     public ResponseEntity<PriseEnChargeModel> save(@RequestBody PriseEnChargeModel request){
         return ResponseEntity.ok(priseEnChargeService.save(request));
     }
-    @PutMapping("/update/{id}")
-    public ResponseEntity<PriseEnChargeModel> update(@PathVariable("id") String id, @RequestBody PriseEnChargeModel request){
+    @PutMapping("/update")
+    public ResponseEntity<PriseEnChargeModel> update(@RequestBody PriseEnChargeModel request){
         return ResponseEntity.ok(priseEnChargeService.update(request));
     }
     @DeleteMapping("/delete/{id}")

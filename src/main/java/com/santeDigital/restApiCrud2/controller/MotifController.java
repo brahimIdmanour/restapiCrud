@@ -42,8 +42,8 @@ public class MotifController {
         return ResponseEntity.ok(motifService.save(request));
     }
 
-    @PutMapping("/update/{id}")
-    public ResponseEntity<MotifModel> update(@PathVariable("id") String id, @RequestBody MotifModel request) {
+    @PutMapping("/update")
+    public ResponseEntity<MotifModel> update(@RequestBody MotifModel request) {
         return ResponseEntity.ok(motifService.update(request));
     }
 

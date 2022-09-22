@@ -29,8 +29,8 @@ public class HistoireMaladieController {
     public ResponseEntity<HistoireMaladieModel> save(@RequestBody HistoireMaladieModel request){
         return ResponseEntity.ok(histoirMaladieService.save(request));
     }
-    @PutMapping("/update/{id}")
-    public ResponseEntity<HistoireMaladieModel> update(@PathVariable("id") String id, @RequestBody HistoireMaladieModel request){
+    @PutMapping("/update")
+    public ResponseEntity<HistoireMaladieModel> update(@RequestBody HistoireMaladieModel request){
         return ResponseEntity.ok(histoirMaladieService.update(request));
     }
     @DeleteMapping("/delete/{id}")
